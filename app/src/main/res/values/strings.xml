@@ -18,4 +18,6 @@
     <string name="key_percent">%</string>
     <string name="clic_count">%d</string>
     <string name="first_zero">%d</string>
+    <string name="black">Черная тема</string>
+    <string name="green">ЗЕЛЕНАЯ ТЕМА</string>
 </resources>
