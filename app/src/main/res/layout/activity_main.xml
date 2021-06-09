@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/numberField"
+        style="@style/CustomStyle"
+        android:layout_width="@dimen/culc_text_view_width"
+        android:layout_height="@dimen/culc_text_view_height"
+        android:background="@color/purple_500"
+        android:gravity="end"
+        android:hint="Введите число"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@+id/operationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultView">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="@dimen/culc_text_view_width"
+        android:layout_height="@dimen/culc_text_view_height"
+        android:layout_marginTop="10dp"
+        android:background="@color/purple_500"
+        android:gravity="end"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/CustomStyle">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/operationView"
+        android:layout_width="@dimen/culc_text_view_width"
+        android:layout_height="@dimen/culc_text_view_height"
+        android:layout_marginBottom="5dp"
+        android:background="@color/purple_500"
+        android:gravity="end"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/CustomStyle">
+
+    </TextView>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:onClick="onNumberClick"
+            android:text="@string/key_1"
+            app:rippleColor="#9C9898"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:onClick="onNumberClick"
+            android:text="@string/key_2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNumberClick"
+            android:text="@string/key_3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNumberClick"
+            android:text="@string/key_4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNumberClick"
+            android:text="@string/key_5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNumberClick"
+            android:text="@string/key_6" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNumberClick"
+            android:text="@string/key_7" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNumberClick"
+            android:text="@string/key_8" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNumberClick"
+            android:text="@string/key_9" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onNumberClick"
+            android:text="@string/key_0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onOperationClick"
+            android:text="@string/key_sum" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onOperationClick"
+            android:text="@string/key_subtraction" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_division"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onOperationClick"
+            android:text="@string/division" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_multiplication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onOperationClick"
+            android:text="@string/multiplication" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_coma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onOperationClick"
+            android:text="@string/key_dot" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_equally"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill_horizontal"
+            android:onClick="onOperationClick"
+            android:text="@string/equally" />
+
+
+
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
