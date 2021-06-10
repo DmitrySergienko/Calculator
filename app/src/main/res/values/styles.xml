@@ -5,4 +5,13 @@
         <item name="android:background">@color/purple_600</item>
         <item name="android:textColor">@color/purple_600</item>
     </style>
+    <style name="OptionListStyle" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">@dimen/option_list_size</item>
+        <item name="android:textColor">@color/teal_700</item>
+    </style>
+
+    <style name="OptionListStyle.Red">
+        <item name="android:textColor">@color/purple_600</item>
+    </style>
+
 </resources>

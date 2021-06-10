@@ -26,6 +26,7 @@
 
     <TextView
         android:id="@+id/resultView"
+        style="@style/CustomStyle"
         android:layout_width="@dimen/culc_text_view_width"
         android:layout_height="@dimen/culc_text_view_height"
         android:layout_marginTop="10dp"
@@ -34,16 +35,16 @@
         android:textSize="@dimen/text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/CustomStyle">
+        app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
 
     <TextView
         android:id="@+id/operationView"
+        style="@style/CustomStyle"
         android:layout_width="@dimen/culc_text_view_width"
         android:layout_height="@dimen/culc_text_view_height"
-        android:layout_marginBottom="5dp"
+
         android:background="@color/purple_500"
         android:gravity="end"
         android:textAlignment="center"
@@ -51,10 +52,35 @@
         app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        style="@style/CustomStyle">
+        app:layout_constraintStart_toStartOf="parent">
 
     </TextView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_black">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout">
+
+    </com.google.android.material.button.MaterialButton>
 
     <GridLayout
         android:id="@+id/gridLayout"
@@ -75,8 +101,7 @@
             android:layout_marginRight="10dp"
             android:onClick="onNumberClick"
             android:text="@string/key_1"
-            app:rippleColor="#9C9898"
-            />
+            app:rippleColor="#9C9898" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_2"
@@ -185,7 +210,6 @@
             android:layout_gravity="fill_horizontal"
             android:onClick="onOperationClick"
             android:text="@string/equally" />
-
 
 
     </GridLayout>
