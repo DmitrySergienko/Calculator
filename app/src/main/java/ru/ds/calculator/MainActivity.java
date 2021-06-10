@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 resultField.setText("0.0");
             }
         });
+        //переключение между темами
         findViewById(R.id.bt_green).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
                 recreate();
             }
         });
-
         findViewById(R.id.bt_black).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
