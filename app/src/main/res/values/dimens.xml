@@ -5,4 +5,7 @@
     <dimen name="culc_text_view_height">52dp</dimen>
     <dimen name="text_size">26sp</dimen>
     <dimen name="button_radius">10sp</dimen>
+
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="option_list_size">16sp</dimen>
 </resources>

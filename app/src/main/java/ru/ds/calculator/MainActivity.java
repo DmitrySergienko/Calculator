@@ -8,9 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private Calculator calculator;
+    private ThemeStorage storage;
 
     public static TextView resultField; // текстовое поле для вывода результата
     public static EditText numberField; // поле для ввода числа
@@ -21,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        storage = new ThemeStorage(this);
+        setTheme(storage.getTheme().getResource());
+
         setContentView(R.layout.activity_main);
 
         calculator = new Calculator();
@@ -35,6 +41,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 resultField.setText("0.0");
+            }
+        });
+        findViewById(R.id.bt_green).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                storage.setTheme(AppTheme.CUSTOM);
+
+                recreate();
+            }
+        });
+
+        findViewById(R.id.bt_black).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                storage.setTheme(AppTheme.DEFAULT);
+
+                recreate();
             }
         });
     }
@@ -84,8 +107,23 @@ public class MainActivity extends AppCompatActivity {
         operationField.setText(lastOperation);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
+    // public void btStart(View view) {
+    //    // Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+    //    // startActivity(intent);
+
+    //     storage.setTheme(AppTheme.CUSTOM);
+
+    //     recreate();
+    // }
+
+    // public void StartBlack(View view) {
+    //     // Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+    //     // startActivity(intent);
+
+    //     storage.setTheme(AppTheme.DEFAULT);
+
+    //     recreate();
+    // }
+
+
 }

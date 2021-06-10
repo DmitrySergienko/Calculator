@@ -20,4 +20,7 @@
     <string name="first_zero">%d</string>
     <string name="black">Черная тема</string>
     <string name="green">ЗЕЛЕНАЯ ТЕМА</string>
+    <string name="second_title">ActivitySecond</string>
+    <string name="blue">синяя тема</string>
+    <string name="red">красная</string>
 </resources>
